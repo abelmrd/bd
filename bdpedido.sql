@@ -23,33 +23,20 @@ USE `database`;
 CREATE TABLE IF NOT EXISTS `Productos` (
   `ID_pedido` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(50) NOT NULL DEFAULT '',
-  `descripcion` varchar(100) NOT NULL DEFAULT '',
+  `descripcion` varchar(150) NOT NULL DEFAULT '',
   `precio` float NOT NULL DEFAULT 0,
-  `composicion` varchar(120) NOT NULL DEFAULT '0',
+  `composicion` varchar(200) NOT NULL DEFAULT '0',
   `imagen` varchar(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ID_pedido`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Volcando datos para la tabla database.Productos: ~5 rows (aproximadamente)
 INSERT INTO `Productos` (`ID_pedido`, `nombre`, `descripcion`, `precio`, `composicion`, `imagen`) VALUES
-	(1, 'Arandanos', '120 UDS. Complemento Proantocianidinas con Vitamina C añadida', 4, 'Extracto de Arándanos (Vaccinium macrocarpon) (Bayas)', '1.png'),
-	(2, 'VitaminaB12', '120 Pastillas. Comprimido de disolución rápida', 3, 'Manitol, Sabores naturales, Celulosa (origen vegetal), Crospovidona, Colorante de remolacha', '2.png'),
-	(25, 'Colageno', 'Colágeno Marino Hidrolizado + Ácido hialurónico ', 3, 'Hidrolizado de colágeno, magnesio, ácido L-ascórbico, citrato de zinc, hialuronato de sodio', '4.png'),
-	(26, 'Magnesio', 'Magnesio Comprimidos 120 capsulas', 3, 'Cloruro de magnesio, carbonato de magnesio, antiaglomerante', '3.png'),
-	(29, 'Suplemento Zinc', 'Oligoelemento capaz de actuar sobre el funcionamiento del sistema inmunológico', 3.8, 'Maltodextrina, Cápsula de origen vegetal (HPMC) ,Zinc (pilodato)', '5.png');
-
--- Volcando estructura para tabla database.Usuarios
-CREATE TABLE IF NOT EXISTS `Usuarios` (
-  `id_usu` int(11) NOT NULL,
-  `nombre` varchar(50) DEFAULT NULL,
-  `password` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id_usu`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
--- Volcando datos para la tabla database.Usuarios: ~2 rows (aproximadamente)
-INSERT INTO `Usuarios` (`id_usu`, `nombre`, `password`) VALUES
-	(1, 'Abel', '1234'),
-	(2, 'antonio', '1234');
+	(1, 'Cúrcuma', '400 Cápsulas 700 mg de cúrcuma + 2,1 mg pimienta', 24, 'Cúrcuma en polvo, cubierta de la cápsula (hidroxipropilmetilcelulosa), extracto de pimienta', '1.png'),
+	(2, 'Multivitaminas', '120 Pastillas. Comprimido de disolución rápida', 9, 'Vitaminas A, B2, B6, B7, B9, B12, C, D, E, K y el zinc', '2.png'),
+	(25, 'Colageno', 'Colágeno Marino Hidrolizado + Ácido hialurónico ', 18, 'Hidrolizado de colágeno, magnesio, ácido L-ascórbico, citrato de zinc, hialuronato de sodio', '3.png'),
+	(26, 'Omega 3', 'Ácidos grasos omega 400 cápsulas', 28, '350mg de ácidos grasos Omega-3, 180mg de EPA, 120mg de DHA por cápsula', '4.png'),
+	(29, 'Suplemento Zinc', '400 tabletas 25 mg de zinc por tableta', 14, 'Maltodextrina, Cápsula de origen vegetal (HPMC) ,Zinc (pilodato)', '5.png');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
